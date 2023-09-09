@@ -1,5 +1,9 @@
 ﻿using AutoMapper;
+using HrNew.Application.Contracts.Presistence;
+using HrNew.Application.DTOs.HrAllocation.Validators;
+using HrNew.Application.Features.HrAllocations.Requests.Commands;
 using HrNew.Application.Responses;
+using HrNew.Domain;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -34,13 +38,13 @@ namespace HrNew.Application.Features.HrAllocations.Handlers.Commands
             }
             else
             {
-                var HrAllocation = _mapper.Map<HrAllocation>(request.HrAllocationDto);
+                var hrAllocation = _mapper.Map<HrAllocation>(request.HrAllocationDto);
 
-                HrAllocation = await _HrAllocationRepository.AddAsync(HrAllocation);
+                hrAllocation = await _HrAllocationRepository.AddAsync(hrAllocation);
 
                 response.Success = true;
                 response.Message = "Creation Successful";
-                response.Id = HrAllocation.Id;
+                response.Id = hrAllocation.Id;
             }
             return response;
         }

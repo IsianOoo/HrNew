@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace HrNew.Application.Constants
 {
-    internal class CustomClaimTypes
+    public class CustomClaimTypes
     {
+        public const string Uid = "uid";
     }
 }

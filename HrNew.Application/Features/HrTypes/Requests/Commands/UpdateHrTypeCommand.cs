@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using HrNew.Application.DTOs.HrType;
+using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Linq;

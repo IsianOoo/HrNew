@@ -1,5 +1,8 @@
 ﻿using AutoMapper;
 using HrNew.Application.Contracts.Presistence;
+using HrNew.Application.DTOs.HrAllocation.Validators;
+using HrNew.Application.Exceptions;
+using HrNew.Application.Features.HrAllocations.Requests.Commands;
 using MediatR;
 using System;
 using System.Collections.Generic;

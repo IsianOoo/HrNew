@@ -1,4 +1,5 @@
-﻿using HrNew.Application.Responses;
+﻿using HrNew.Application.DTOs.HrAllocation;
+using HrNew.Application.Responses;
 using MediatR;
 using System;
 using System.Collections.Generic;

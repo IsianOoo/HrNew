@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using HrNew.Application.Contracts.Presistence;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,15 +10,15 @@ namespace HrNew.Application.DTOs.HrRequest.Validators
 {
     public class UpdateHrRequestDtoValidator : AbstractValidator<UpdateHrRequestDto>
     {
-        private readonly IHrAllocationRepository _HrAllocationRepository;
-        private readonly IHrTypeRepository _HrTypeRepository;
+        private readonly IHrAllocationRepository _hrAllocationRepository;
+        private readonly IHrTypeRepository _hrTypeRepository;
 
         public UpdateHrRequestDtoValidator(IHrAllocationRepository HrAllocationRepository, IHrTypeRepository HrTypeRepository)
         {
-            _HrAllocationRepository = HrAllocationRepository;
-            _HrTypeRepository = HrTypeRepository;
+            _hrAllocationRepository = HrAllocationRepository;
+            _hrTypeRepository = HrTypeRepository;
 
-            Include(new IHrRequestDtoValidator(_HrAllocationRepository, _HrTypeRepository));
+            Include(new IHrRequestDtoValidator(_hrAllocationRepository, _hrTypeRepository));
 
             RuleFor(p => p.Id).NotNull().WithMessage("{PropertyName} must be present");
         }

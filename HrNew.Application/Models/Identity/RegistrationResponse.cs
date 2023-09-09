@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HrNew.Application.Models
+namespace HrNew.Application.Models.Identity
 {
-    internal class RegistrationResponse
+    public class RegistrationResponse
     {
+        public string UserId { get; set; }
     }
 }

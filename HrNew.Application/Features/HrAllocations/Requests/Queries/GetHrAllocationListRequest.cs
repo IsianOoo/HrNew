@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HrNew.Application.DTOs.HrAllocation;
+using MediatR;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HrNew.Application.Features.HrAllocations.Requests.Queries
 {
-    internal class GetHrAllocationListRequest
+    public class GetHrAllocationListRequest : IRequest<List<HrAllocationDto>>
     {
     }
 }

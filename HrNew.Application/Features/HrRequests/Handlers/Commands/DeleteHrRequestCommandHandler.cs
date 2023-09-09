@@ -1,5 +1,8 @@
 ﻿using AutoMapper;
+using HrNew.Application.Contracts.Presistence;
 using HrNew.Application.Exceptions;
+using HrNew.Application.Features.HrRequests.Requests.Commands;
+using HrNew.Domain;
 using MediatR;
 using System;
 using System.Collections.Generic;

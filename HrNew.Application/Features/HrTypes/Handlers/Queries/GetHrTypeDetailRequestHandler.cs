@@ -1,4 +1,7 @@
 ﻿using AutoMapper;
+using HrNew.Application.Contracts.Presistence;
+using HrNew.Application.DTOs.HrType;
+using HrNew.Application.Features.HrTypes.Requests.Queries;
 using MediatR;
 using System;
 using System.Collections.Generic;

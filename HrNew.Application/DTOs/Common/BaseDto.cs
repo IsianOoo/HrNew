@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace HrNew.Application.DTOs.Common
 {
-    internal class BaseDto
+    public abstract class BaseDto
     {
+        public int Id { get; set; }
     }
 }

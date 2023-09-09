@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace HrNew.Application.DTOs.HrAllocation
 {
-    internal class IHrAllocationDto
+    public interface IHrAllocationDto
     {
+        public string Name { get; set; }
+        public string Surname { get; set; }
     }
 }

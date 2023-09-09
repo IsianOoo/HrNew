@@ -1,4 +1,5 @@
-﻿using HrNew.Application.Responses;
+﻿using HrNew.Application.DTOs.HrType;
+using HrNew.Application.Responses;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -12,3 +13,4 @@ namespace HrNew.Application.Features.HrTypes.Requests.Commands
     {
         public CreateHrTypeDto HrTypeDto { get; set; }
     }
+}

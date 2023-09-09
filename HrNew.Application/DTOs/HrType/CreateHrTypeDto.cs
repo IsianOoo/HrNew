@@ -10,3 +10,4 @@ namespace HrNew.Application.DTOs.HrType
     {
         public string Name { get; set; }
     }
+}

@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using HrNew.Application.Contracts.Presistence;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,15 +11,15 @@ namespace HrNew.Application.DTOs.HrRequest.Validators
     public class CreateHrRequestDtoValidator : AbstractValidator<CreateHrRequestDto>
     {
 
-        private readonly IHrAllocationRepository _HrAllocationRepository;
-        private readonly IHrTypeRepository _HrTypeRepository;
+        private readonly IHrAllocationRepository _hrAllocationRepository;
+        private readonly IHrTypeRepository _hrTypeRepository;
 
         public CreateHrRequestDtoValidator(IHrAllocationRepository HrAllocationRepository, IHrTypeRepository HrTypeRepository)
         {
-            _HrAllocationRepository = HrAllocationRepository;
-            _HrTypeRepository = HrTypeRepository;
+            _hrAllocationRepository = HrAllocationRepository;
+            _hrTypeRepository = HrTypeRepository;
 
-            Include(new IHrRequestDtoValidator(_HrAllocationRepository, _HrTypeRepository));
+            Include(new IHrRequestDtoValidator(_hrAllocationRepository, _hrTypeRepository));
         }
     }
 }

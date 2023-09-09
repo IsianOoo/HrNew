@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace HrNew.Application.DTOs.HrType
 {
-    internal class IHrTypeDto
+    public interface IHrTypeDto
     {
+        public string Name { get; set; }
     }
 }

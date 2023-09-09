@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using HrNew.Application.DTOs.HrType;
+using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HrNew.Application.Features.HrTypes.Requests.Queries
 {
-    internal class GetHrTypeListRequest : IRequest<List<HrTypeDto>>
+    public class GetHrTypeListRequest : IRequest<List<HrTypeDto>>
     {
     }
 }

@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
+using HrNew.Application.Contracts.Presistence;
 using HrNew.Application.Exceptions;
+using HrNew.Application.Features.HrAllocations.Requests.Commands;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -34,3 +36,4 @@ namespace HrNew.Application.Features.HrAllocations.Handlers.Commands
             return Unit.Value;
         }
     }
+}
