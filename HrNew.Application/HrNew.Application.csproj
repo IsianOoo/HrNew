@@ -9,11 +9,6 @@
   <ItemGroup>
     <Folder Include="Features\HrRequests\Handlers\Commands\" />
     <Folder Include="Features\HrRequests\Handlers\Queries\" />
-    <Folder Include="Features\HrRequests\Requests\Commands\" />
-    <Folder Include="Features\HrRequests\Requests\Queries\" />
-    <Folder Include="Features\HrTypes\Handlers\Commands\" />
-    <Folder Include="Features\HrTypes\Handlers\Queries\" />
-    <Folder Include="Features\HrTypes\Requests\Queries\" />
     <Folder Include="Models\" />
   </ItemGroup>
 
