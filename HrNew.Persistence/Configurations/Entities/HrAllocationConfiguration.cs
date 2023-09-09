@@ -17,33 +17,34 @@ namespace HrNew.Persistence.Configurations.Entities
                 new HrAllocation
                 {
                     Id = 101,
-                    Name = "Standard",
-                    Section = "3"
+                    Name = "Adam",
+                    Surname = "Nowak"
                 },
                 new HrAllocation
                 {
                     Id = 102,
-                    Warehouse = "Express",
-                    Section = "2"
+                    Name = "Maciek",
+                    Surname = "Bogdan"
                 },
                 new HrAllocation
                 {
                     Id = 103,
-                    Warehouse = "Palette",
-                    Section = "5"
+                    Name = "Tymon",
+                    Surname = "Matison"
                 },
                 new HrAllocation
                 {
                     Id = 104,
-                    Warehouse = "International By Plane",
-                    Section = "14"
+                    Name = "Jan",
+                    Surname = "Szczur"
                 },
                 new HrAllocation
                 {
                     Id = 105,
-                    Warehouse = "International by Ship",
-                    Section = "45"
+                    Name = "Konrad",
+                    Surname = "Epal"
                 });
 
         }
     }
+}

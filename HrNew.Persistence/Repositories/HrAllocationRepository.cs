@@ -1,4 +1,5 @@
 ﻿using HrNew.Application.Contracts.Presistence;
+using HrNew.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;

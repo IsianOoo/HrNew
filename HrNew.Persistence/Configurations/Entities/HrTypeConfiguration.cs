@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HrNew.Domain;
 
 namespace HrNew.Persistence.Configurations.Entities
 {
@@ -15,18 +16,13 @@ namespace HrNew.Persistence.Configurations.Entities
             builder.HasData(
                 new HrType
                 {
-                    Id = 1000,
-                    Name = "Unloading"
+                    Id = 1,
+                    Name = "Vacation"
                 },
                 new HrType
                 {
-                    Id = 1001,
-                    Name = "Preparing"
-                },
-                new HrType
-                {
-                    Id = 1002,
-                    Name = "Sent"
+                    Id = 2,
+                    Name = "Sick"
                 });
         }
     }

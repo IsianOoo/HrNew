@@ -1,4 +1,7 @@
-﻿using System;
+﻿using HrNew.Application.Contracts.Presistence;
+using HrNew.Domain;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

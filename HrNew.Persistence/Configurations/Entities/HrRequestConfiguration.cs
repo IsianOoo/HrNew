@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HrNew.Domain;
 
 namespace HrNew.Persistence.Configurations.Entities
 {
@@ -16,24 +17,23 @@ namespace HrNew.Persistence.Configurations.Entities
                new HrRequest
                {
                    Id = 1,
-                   HrTypeId = 1000,
+                   HrTypeId = 1,
                    HrAllocationId = 101,
-                   City = "Cracow",
-                   Street = "Zielona",
-                   HouseNumber = 12,
-                   ZipCode = "30‑063",
-                   RequestComments = "No Comment"
+                   StartDate = DateTime.Now,
+                   EndDate = DateTime.Now,
+                   Description = "Description"
+                   
+                   
                },
                new HrRequest
                {
                    Id = 2,
-                   HrTypeId = 1001,
+                   HrTypeId = 2,
                    HrAllocationId = 102,
-                   City = "Cracow",
-                   Street = "Zielona",
-                   HouseNumber = 12,
-                   ZipCode = "30‑063",
-                   RequestComments = "No Comment"
+                   StartDate = DateTime.Now,
+                   EndDate = DateTime.Now,
+                   Description = "Description"
+
                });
         }
     }

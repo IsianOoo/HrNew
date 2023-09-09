@@ -1,12 +1,29 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using HrNew.Application.Contracts.Identity;
+using HrNew.Application.Models.Identity;
+using Microsoft.AspNetCore.Mvc;
 
 namespace HrNew.API.Controllers
 {
-    public class AccountController : Controller
+    [Route("api/[controller]")]
+    [ApiController]
+    public class AccountController : ControllerBase
     {
-        public IActionResult Index()
+        private readonly IAuthService _authenticationService;
+        public AccountController(IAuthService authenticationService)
         {
-            return View();
+            _authenticationService = authenticationService;
+        }
+
+        [HttpPost("login")]
+        public async Task<ActionResult<AuthResponse>> Login(AuthRequest request)
+        {
+            return Ok(await _authenticationService.Login(request));
+        }
+
+        [HttpPost("register")]
+        public async Task<ActionResult<RegistrationResponse>> Register(RegistrationRequest request)
+        {
+            return Ok(await _authenticationService.Register(request));
         }
     }
 }

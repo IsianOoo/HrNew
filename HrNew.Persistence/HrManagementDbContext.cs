@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using HrNew.Domain;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,3 +29,4 @@ namespace HrNew.Persistence
         public DbSet<HrType> HrTypes { get; set; }
         public DbSet<HrAllocation> HrAllocations { get; set; }
     }
+}
