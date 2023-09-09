@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HrNew.Application.DTOs.HrType
+namespace HrNew.Application.Features.HrAllocations.Handlers.Queries
 {
-    public class CreateHrTypeDto : IHrTypeDto
+    internal class GetHrAllocationDetailRequestHandler
     {
-        public string Name { get; set; }
     }
+}

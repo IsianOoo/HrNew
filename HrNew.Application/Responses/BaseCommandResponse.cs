@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HrNew.Application.DTOs.HrType
+namespace HrNew.Application.Responses
 {
-    public class CreateHrTypeDto : IHrTypeDto
+    internal class BaseCommandResponse
     {
-        public string Name { get; set; }
     }
+}

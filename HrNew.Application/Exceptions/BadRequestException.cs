@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HrNew.Application.DTOs.HrType
+namespace HrNew.Application.Exceptions
 {
-    public class CreateHrTypeDto : IHrTypeDto
+    internal class BadRequestException
     {
-        public string Name { get; set; }
     }
+}
