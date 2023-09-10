@@ -15,7 +15,7 @@ namespace HrNew.API
 
             AddSwaggerDoc(builder.Services);
             builder.Services.ConfigureApplicationServices();
-            //builder.Services.ConfigurePersistenceServices(builder.Configuration);
+            builder.Services.ConfigurePersistenceServices(builder.Configuration);
             builder.Services.ConfigureIdentityServices(builder.Configuration);
 
             builder.Services.AddControllers();
