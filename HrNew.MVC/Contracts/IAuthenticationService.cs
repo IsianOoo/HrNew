@@ -1,6 +1,15 @@
-﻿namespace HrNew.MVC.Contracts
+﻿using HrNew.MVC.Models;
+
+namespace HrNew.MVC.Contracts
 {
-    public class IAuthenticationService
+    public interface IAuthenticationService
     {
+        Task<bool> Authenticate(string email, string password);
+
+        Task<bool> Register(RegisterVM registration);
+
+        Task Logout();
+
+
     }
 }

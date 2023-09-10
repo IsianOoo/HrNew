@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using HrNew.MVC.Contracts;
+using HrNew.MVC.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Data;
 
 namespace HrNew.MVC.Controllers
 {
-    [Authorize(Roles = "Administrator")]
+    //[Authorize(Roles = "Administrator")]
     public class HrAllocationsController : Controller
     {
         private readonly IHrAllocationService _deliveryAllocationRepository;

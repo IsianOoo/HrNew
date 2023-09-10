@@ -1,4 +1,6 @@
-﻿namespace HrNew.MVC.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace HrNew.MVC.Models
 {
     public class HrAllocationVM : CreateHrAllocationVM
     {
@@ -8,9 +10,9 @@
     public class CreateHrAllocationVM
     {
         [Required]
-        public string Warehouse { get; set; }
+        public string Name { get; set; }
 
         [Required]
-        public string Section { get; set; }
+        public string Surname { get; set; }
     }
 }

@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using HrNew.MVC.Contracts;
+using HrNew.MVC.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace HrNew.MVC.Controllers
 {

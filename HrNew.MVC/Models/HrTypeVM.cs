@@ -1,4 +1,6 @@
-﻿namespace HrNew.MVC.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace HrNew.MVC.Models
 {
     public class HrTypeVM : CreateHrTypeVM
     {

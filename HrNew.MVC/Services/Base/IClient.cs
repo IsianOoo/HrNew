@@ -1,6 +1,7 @@
 ﻿namespace HrNew.MVC.Services.Base
 {
-    public class IClient
+    public partial interface IClient
     {
+        public HttpClient HttpClient { get; }
     }
 }

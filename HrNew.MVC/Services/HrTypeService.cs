@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Hr.Management.MVC.Services.Base;
+
 using HrNew.MVC.Contracts;
 using HrNew.MVC.Models;
 using HrNew.MVC.Services.Base;

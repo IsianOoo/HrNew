@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using HrNew.MVC.Contracts;
+using HrNew.MVC.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace HrNew.MVC.Controllers
 {
@@ -80,12 +82,7 @@ namespace HrNew.MVC.Controllers
             return View(hrRequest);
         }
 
-        // GET: HrRequestsController/Delete/5
-        //public async Task<ActionResult> Delete(int id)
-        //{
-        //    var model = await _hrRequestRepository.DeleteHrRequest(id);
-        //    return View();
-        //}
+      
 
         // POST: HrRequestsController/Delete/5
         [HttpPost]

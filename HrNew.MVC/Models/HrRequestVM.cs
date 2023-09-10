@@ -1,4 +1,6 @@
-﻿namespace HrNew.MVC.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace HrNew.MVC.Models
 {
     public class HrRequestVM : CreateHrRequestVM
     {
@@ -9,16 +11,25 @@
     {
         [Required]
         public int HrTypeId { get; set; }
+
         [Required]
         public int HrAllocationId { get; set; }
+
+        [Display(Name = "Start Date")]
         [Required]
-        public string City { get; set; }
+        public DateTime StartDate { get; set; }
+
+        [Display(Name = "End Date")]
         [Required]
-        public string Street { get; set; }
+        public DateTime EndDate { get; set; }
+
+        [Display(Name = "Description")]
         [Required]
-        public int HouseNumber { get; set; }
-        [Required]
-        public string ZipCode { get; set; }
-        public string RequestComments { get; set; }
+        public string Description { get; set; }
+
+        public HrAllocationVM HrAllocation { get; set; }
+
+        public HrTypeVM HrType { get; set; }
+
     }
 }

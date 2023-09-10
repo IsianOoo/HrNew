@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using HrNew.MVC.Contracts;
+using HrNew.MVC.Models;
 using HrNew.MVC.Services.Base;
 
 namespace HrNew.MVC.Services
