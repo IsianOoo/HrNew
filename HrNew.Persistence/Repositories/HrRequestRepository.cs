@@ -19,22 +19,22 @@ namespace HrNew.Persistence.Repositories
 
         public async Task<HrRequest> GetHrRequestWithDetails(int id)
         {
-            var deliveryRequest = await _dbContext.HrRequests
+            var hrRequest = await _dbContext.HrRequests
                 .Include(q => q.HrType)
                 .Include(p => p.HrAllocation)
                 .FirstOrDefaultAsync(x => x.Id == id);
 
-            return deliveryRequest;
+            return hrRequest;
         }
 
         public async Task<List<HrRequest>> GetHrRequestWithDetails()
         {
-            var deliveryRequest = await _dbContext.HrRequests
+            var hrRequest = await _dbContext.HrRequests
                 .Include(q => q.HrType)
                 .Include(p => p.HrAllocation)
                 .ToListAsync();
 
-            return deliveryRequest;
+            return hrRequest;
         }
     }
 }

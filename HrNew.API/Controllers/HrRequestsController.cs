@@ -23,32 +23,32 @@ namespace HrNew.API.Controllers
         [HttpGet]
         public async Task<ActionResult<List<HrRequestDto>>> Get()
         {
-            var deliveryRequests = await _mediator.Send(new GetHrRequestListRequest());
-            return Ok(deliveryRequests);
+            var hrRequests = await _mediator.Send(new GetHrRequestListRequest());
+            return Ok(hrRequests);
         }
 
         // GET api/<HrRequestsController>/5
         [HttpGet("{id}")]
         public async Task<ActionResult<HrRequestDto>> Get(int id)
         {
-            var deliveryAllocation = await _mediator.Send(new GetHrRequestDetailRequest { Id = id });
-            return Ok(deliveryAllocation);
+            var hrAllocation = await _mediator.Send(new GetHrRequestDetailRequest { Id = id });
+            return Ok(hrAllocation);
         }
 
         // POST api/<HrRequestsController>
         [HttpPost]
-        public async Task<ActionResult<BaseCommandResponse>> Post([FromBody] CreateHrRequestDto deliveryRequest)
+        public async Task<ActionResult<BaseCommandResponse>> Post([FromBody] CreateHrRequestDto hrRequest)
         {
-            var command = new CreateHrRequestCommand { HrRequestDto = deliveryRequest };
+            var command = new CreateHrRequestCommand { HrRequestDto = hrRequest };
             var response = await _mediator.Send(command);
             return Ok(response);
         }
 
         // PUT api/<HrRequestsController>/5
         [HttpPut("{id}")]
-        public async Task<ActionResult> Put(int id, [FromBody] UpdateHrRequestDto deliveryRequest)
+        public async Task<ActionResult> Put(int id, [FromBody] UpdateHrRequestDto hrRequest)
         {
-            var command = new UpdateHrRequestCommand { Id = id, HrRequestDto = deliveryRequest };
+            var command = new UpdateHrRequestCommand { Id = id, HrRequestDto = hrRequest };
             await _mediator.Send(command);
             return NoContent();
         }

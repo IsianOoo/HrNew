@@ -21,32 +21,32 @@ namespace HrNew.API.Controllers
         [HttpGet]
         public async Task<ActionResult<List<HrTypeDto>>> Get()
         {
-            var deliveryTypes = await _mediator.Send(new GetHrTypeListRequest());
-            return Ok(deliveryTypes);
+            var hrTypes = await _mediator.Send(new GetHrTypeListRequest());
+            return Ok(hrTypes);
         }
 
         // GET api/<HrTypesController>/5
         [HttpGet("{id}")]
         public async Task<ActionResult<HrTypeDto>> Get(int id)
         {
-            var deliveryType = await _mediator.Send(new GetHrTypeDetailRequest { Id = id });
-            return Ok(deliveryType);
+            var hrType = await _mediator.Send(new GetHrTypeDetailRequest { Id = id });
+            return Ok(hrType);
         }
 
         // POST api/<HrTypesController>
         [HttpPost]
-        public async Task<ActionResult<BaseCommandResponse>> Post([FromBody] CreateHrTypeDto deliveryType)
+        public async Task<ActionResult<BaseCommandResponse>> Post([FromBody] CreateHrTypeDto hrType)
         {
-            var command = new CreateHrTypeCommand { HrTypeDto = deliveryType };
+            var command = new CreateHrTypeCommand { HrTypeDto = hrType };
             var response = await _mediator.Send(command);
             return Ok(response);
         }
 
         // PUT api/<HrTypesController>/5
         [HttpPut("{id}")]
-        public async Task<ActionResult> Put([FromBody] HrTypeDto deliveryType)
+        public async Task<ActionResult> Put([FromBody] HrTypeDto hrType)
         {
-            var command = new UpdateHrTypeCommand { HrTypeDto = deliveryType };
+            var command = new UpdateHrTypeCommand { HrTypeDto = hrType };
             await _mediator.Send(command);
             return NoContent();
         }

@@ -22,34 +22,34 @@ namespace HrNew.API.Controllers
         [HttpGet]
         public async Task<ActionResult<List<HrAllocationDto>>> Get()
         {
-            var deliveryAllocations = await _mediator.Send(new GetHrAllocationListRequest());
-            return Ok(deliveryAllocations);
+            var hrAllocations = await _mediator.Send(new GetHrAllocationListRequest());
+            return Ok(hrAllocations);
         }
 
         // GET api/<HrAllocationsController>/5
         [HttpGet("{id}")]
         public async Task<ActionResult<HrAllocationDto>> Get(int id)
         {
-            var deliveryAllocation = await _mediator.Send(new GetHrAllocationDetailRequest { Id = id });
-            return Ok(deliveryAllocation);
+            var hrAllocation = await _mediator.Send(new GetHrAllocationDetailRequest { Id = id });
+            return Ok(hrAllocation);
         }
 
         // POST api/<HrAllocationsController>
         [HttpPost]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
-        public async Task<ActionResult<BaseCommandResponse>> Post([FromBody] CreateHrAllocationDto deliveryAllocation)
+        public async Task<ActionResult<BaseCommandResponse>> Post([FromBody] CreateHrAllocationDto hrAllocation)
         {
-            var command = new CreateHrAllocationCommand { HrAllocationDto = deliveryAllocation };
+            var command = new CreateHrAllocationCommand { HrAllocationDto = hrAllocation };
             var response = await _mediator.Send(command);
             return Ok(response);
         }
 
         // PUT api/<HrAllocationsController>/5
         [HttpPut("{id}")]
-        public async Task<ActionResult> Put([FromBody] HrAllocationDto deliveryAllocation)
+        public async Task<ActionResult> Put([FromBody] HrAllocationDto hrAllocation)
         {
-            var command = new UpdateHrAllocationCommand { HrAllocationDto = deliveryAllocation };
+            var command = new UpdateHrAllocationCommand { HrAllocationDto = hrAllocation };
             await _mediator.Send(command);
             return NoContent();
         }
