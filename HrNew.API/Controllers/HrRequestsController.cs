@@ -4,12 +4,15 @@ using HrNew.Application.Features.HrRequests.Requests.Queries;
 using HrNew.Application.Features.HrTypes.Requests.Commands;
 using HrNew.Application.Responses;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
 
 namespace HrNew.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(Roles = "Administrator,Employee")]
 
     public class HrRequestsController : ControllerBase
     {

@@ -1,9 +1,12 @@
 ﻿using HrNew.MVC.Contracts;
 using HrNew.MVC.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
 
 namespace HrNew.MVC.Controllers
 {
+    [Authorize(Roles = "Administrator")]
     public class HrTypesController : Controller
     {
         private readonly IHrTypeService _hrTypeRepository;

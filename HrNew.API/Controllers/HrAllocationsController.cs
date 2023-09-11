@@ -3,12 +3,14 @@ using HrNew.Application.Features.HrAllocations.Requests.Commands;
 using HrNew.Application.Features.HrAllocations.Requests.Queries;
 using HrNew.Application.Responses;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HrNew.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(Roles = "Administrator")]
 
     public class HrAllocationsController : ControllerBase
     {
